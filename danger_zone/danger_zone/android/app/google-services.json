@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499398869744",
+    "firebase_url": "https://danger-zone-a9a81.firebaseio.com",
+    "project_id": "danger-zone-a9a81",
+    "storage_bucket": "danger-zone-a9a81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499398869744:android:43c8689d556dbb98183835",
+        "android_client_info": {
+          "package_name": "android.upb.dangerzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499398869744-po52a03je8n0ojltmbnn8f9csblr2aer.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCju-Ojwk6TV6KXcnpjMejD1ZRjURryCuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499398869744-po52a03je8n0ojltmbnn8f9csblr2aer.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
