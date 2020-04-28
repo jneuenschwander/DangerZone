@@ -5,7 +5,7 @@ class HelpButton extends StatelessWidget {
  Widget build(BuildContext context) {
   return new Container(
     child: Align(
-      alignment: Alignment.topRight,
+      alignment: Alignment.bottomRight,
       child: IconButton(
         iconSize: 70.0,
         icon: Icon(

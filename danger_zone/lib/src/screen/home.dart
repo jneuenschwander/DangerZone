@@ -1,3 +1,4 @@
+import 'package:danger_zone/src/service/authentication.dart';
 import 'package:danger_zone/src/widgets/app_button.dart';
 import 'package:danger_zone/src/widgets/app_helpButton.dart';
 import 'package:danger_zone/src/widgets/app_icon.dart';
@@ -11,6 +12,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String _email;
+  String _password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +41,17 @@ class _HomeState extends State<Home> {
               ),
               SizedBox(height: 15.0,),
 
-              AppTextfieldIcon(hintText: "Mail",icono: Icons.mail ,),
-              AppTextfieldIcon(hintText: "Password",icono: Icons.lock_open ,),
+              AppTextfieldIcon(hintText: "Mail",icono: Icons.mail ,
+                onChanged:(value){
+                  _email = value;
+                } ,              
+              ),
+              AppTextfieldIcon(hintText: "Password",icono: Icons.lock_open ,
+              onChanged: (value){
+                _password = value;
+              },
+              
+              ),
               
               SizedBox(height: 43.0,),
               AppButton(
@@ -47,8 +59,14 @@ class _HomeState extends State<Home> {
                 colorText: Colors.white,
                 name: "Log in",
                 bordesOn: true,
-                onPressed: (){Navigator.pushNamed(context,'/chart');},
-                )
+                onPressed: ()
+                {
+                  var user = Authentication().loginUser(email: _email, password: _password);
+                   if(user != null){
+                  Navigator.pushNamed(context,'/chart');
+                  }
+                },
+              )
 
             ],
           ),
